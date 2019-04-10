@@ -3,14 +3,14 @@
 ![wordcloud](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/quora_wordcloud.png)
 
 # Contents
-Introduction
-EDA/text cleaning
-Model
-Outcome
-Reference
+[Introduction](#Introduction)
+[EDA and text cleaning](#EDA)
+[Model](#Model)
+[Outcome](#Outcome)
+[Reference](#Reference)
 
 
-# Introduction
+## Introduction
 
 This challenge is hosted by Kaggle. The objective of this project is to predict whether a question asked on Quora is sincere or not.
 https://www.kaggle.com/c/quora-insincere-questions-classification/overview
@@ -34,29 +34,29 @@ The metric used for evaluation is [F1 score](https://en.wikipedia.org/wiki/F1_sc
 #### Word embeddings
 Word embeddings are provided and allowed in the challenge.
 - [GoogleNews-vectors-negative300](https://code.google.com/archive/p/word2vec/)
-- glove.840B.300d - https://nlp.stanford.edu/projects/glove/
-- paragram_300_sl999 - https://cogcomp.org/page/resource_view/106
-- wiki-news-300d-1M - https://fasttext.cc/docs/en/english-vectors.html
+- [glove.840B.300d](https://nlp.stanford.edu/projects/glove/)
+- [paragram_300_sl999](https://cogcomp.org/page/resource_view/106)
+- [wiki-news-300d-1M](https://fasttext.cc/docs/en/english-vectors.html)
 
-# EDA
+## EDA
 
 ![EDA](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/targetcount.png)
 Imbalanced class
 
 
-# Text cleaning
+## Text cleaning
 The biggest challenge. Tried multiple ways to clean the data.
 
 
 
-# Model
+## Model
   0. Naive Bayes with Logistic Regression Model baseline
   1. LSTM Neural Network with no embeddings weights
   2. LSTM and GRU Neural Network with embeddings weights (GloVe)
   3. LSTM and GRU and attention layer Neural Network with embeddings weights (GloVe)
 
 
-# Outcome
+## Outcome
 
 | Model         | Public Score  | Rank  |
 | ------------- |:-------------:| -----:|
@@ -67,8 +67,7 @@ The biggest challenge. Tried multiple ways to clean the data.
 
 **Note: These are all late submission, hence they are not shown on the public leaderboard**
 
-# Reference
+## Reference
 
-
-https://www.kaggle.com/ashishpatel26/nlp-text-analytics-solution-quora
-https://www.kaggle.com/christofhenkel/how-to-preprocessing-when-using-embeddings
+- https://www.kaggle.com/ashishpatel26/nlp-text-analytics-solution-quora
+- https://www.kaggle.com/christofhenkel/how-to-preprocessing-when-using-embeddings
