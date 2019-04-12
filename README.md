@@ -1,6 +1,6 @@
 # Quora Insincere Questions Classification Kaggle Challenge
 
-<img src="https://github.com/kammybdeng/quora-insincere-question/blob/master/img/quora_wordcloud.png" width="800" height="600" />
+<img src="https://github.com/kammybdeng/quora-insincere-question/blob/master/img/quora_wordcloud.png" width="900" height="500" />
 
 ## Contents
 - [Introduction](#Introduction)
