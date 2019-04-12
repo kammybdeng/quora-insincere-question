@@ -11,22 +11,22 @@
 
 ### Sample layers
 
-1. Input Layer
+1. **Input Layer**
 
-2. Convolution              | →  produce feature maps that preserve spatial relationships in data
+2. **Convolution**              | →  produce feature maps that preserve spatial relationships in data
 
-3. Pooling/Subsampling    	| →  reduce the dimensionality and number of parameters
+3. **Pooling/Subsampling**    	| →  reduce data dimensionality and the number of parameters
 
-4. Flatten			            |	→  flatten the matrix to a column vector to feed into MLP
+4. **Flatten**			            |	→  flatten the matrix to a desirable size
 
-5. Activation 	           	|	→  to make outputs non-linear, e.g. sigmoid can restrain results to [0,1] and ReLU can restrain results to [0, +]
+5. **Activation** 	           	|	→  transform outputs to non-linear relationship, e.g. sigmoid can restrain results to [0,1] and ReLU can restrain results to [0, +]
 
 ## Recurrent Neural Network
 ![rnn_vs_rrnn](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/rnn_vs_rrnn.png)
 
-### How is it different from CNN?
+### How is RNN different from CNN?
 
-RNN learns from previous events, where CNN is not. Quoted from one of the resources, “RNN works on the principle of saving the output of a layer and feeding this back to the input in order to predict the output of the layer.”
+RNN learns from previous events, where CNN does not. Quoted from one of the resources, “RNN works on the principle of saving the output of a layer and feeding this back to the input in order to predict the output of the layer.”
 
 | Conventional Neural Network            | Recurrent Neural Network
 | ---------------------------------      |:-------------------------
@@ -38,30 +38,32 @@ RNN learns from previous events, where CNN is not. Quoted from one of the resour
 
 ### Sample layers
 
-1. Input Layer
+1. **Input Layer**
 
-2. Embedding layer   →  assign embedding weights
+2. **Embedding layer**   →  assign pretrained weights to model
 
-3. Bidirectional     →  train from both directions X(t) -> X(t+1) and X(t+1) -> X(t)
+3. **Bidirectional**     →  train from both directions X(t) -> X(t+1) and X(t+1) -> X(t)
 
-3. Attention layer  →  to give more attention to specific parts of the data
+4. **Dense**             → shrink the matrix/data to a smaller size
 
-4. Dense           → to shrink the matrix/data to a smaller size
-
-5. Dropout 			   →  to prevent overfitting, higher dropout rate should apply on layer with larger content/dimension/
-
+5. **Dropout** 		  	   → prevent overfitting, large dimension layer could have higher dropout rate
 
 However, sometimes the previous events are not very helpful for us or the machine to understand the big picture. Therefore, another branch of RNN is created and it’s called **LSTM (Long Short Term Memory)**
 
 ## LTSM
 ![lstm](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/lstm_model.png)
 
+LTSMs, Long Short Term Memory networks, are a special kind of RNN that are capable of learning long-term dependencies. They can remember information for long periods of time., where as standard RNNs struggles to learn. The sophisticated design of the LSTMs allows them to forget and keep previous information in a more precise way.
+
+## GRU
+To determine how much of the past information needs to be passed to the output or to forget, GRUs, Gated Recurrent Unit, are models that update and reset the gates.
 
 ## Bidirectional
-use both past and future information to get a better sense of current input.
+Use both past and future information to get a better sense of current input.
 
 
 **Forward direction** - will learn the past
+
 **Backward direction** - will learn the future (because it starts from the end and learns backward)
 
 #### Example:
@@ -72,9 +74,9 @@ use both past and future information to get a better sense of current input.
 By using the bidirectional technique, we can capture both the information before **("said")** and after **("bears"/"Roosevelt")** the word **"Teddy"**.
 
 
-### Reference:
+## Reference
 
-This project won't be successful without the great resources on the Data Science community. Below are all the references that I used when compiling this notebook. All of them provided great explanations on the topic.
+This project would not made possible without the great resources from the Data Science community. Below are all the references that I used when compiling this notebook. All of them provided great explanation and examples of the topic.
 
 - https://hackernoon.com/understanding-architecture-of-lstm-cell-from-scratch-with-code-8da40f0b71f4
 - http://blog.echen.me/2017/05/30/exploring-lstms/
