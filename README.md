@@ -19,9 +19,7 @@ https://www.kaggle.com/c/quora-insincere-questions-classification/overview
 Quora is a platform that empowers people to learn from each other. On Quora, people can ask questions and connect with others who contribute unique insights and quality answers.
 
 ### What's an insincere question?
-As defined in the [challenge description](https://www.kaggle.com/c/quora-insincere-questions-classification/data)
-
-An insincere question is defined as a question intended to make a statement rather than look for helpful answers. Some characteristics are:
+As defined in the [challenge description](https://www.kaggle.com/c/quora-insincere-questions-classification/data), an insincere question is defined as a question intended to make a statement rather than look for helpful answers. Some characteristics are:
 
 - Has a non-neutral tone
 - Is disparaging or inflammatory
@@ -31,7 +29,7 @@ An insincere question is defined as a question intended to make a statement rath
 ### What's the evaluation metric?
 The metric used for evaluation is [F1 score](https://en.wikipedia.org/wiki/F1_score)
 
-## Word embeddings
+### Word embeddings
 Word embeddings are provided and allowed in the challenge.
 - [GoogleNews-vectors-negative300](https://code.google.com/archive/p/word2vec/)
 - [glove.840B.300d](https://nlp.stanford.edu/projects/glove/)
@@ -54,13 +52,13 @@ To begin, I started with a basic naive bayes model with logistic regression to p
 
   0. Naive Bayes with Logistic Regression Model baseline [link to model_0](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_0.ipynb)
   1. LSTM Neural Network with basic text cleanings and no embeddings weights [link to model_1](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_1.ipynb)
-  2. LSTM and GRU Neural Network with embeddings weights (GloVe)[link to model_2](xxx)
+  2. LSTM and GRU Neural Network with embeddings weights (GloVe) [link to model_2](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_2.ipynb)
   3. Trained with KFold
   4. LSTM and GRU Neural Network with embeddings weights and adjusted parameters(GloVe)[link to model_3](xxx)
 
-### What are RNN and LSTM?
+## What are RNN and LSTM?
 
-It's my first time implementing neural network model. I ran into a lot of difficulties and spent a great amount of time to learn the concepts while I was training the models. I have compiled a [notebook](!https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my understand of the topic.
+It's my first time implementing neural network model. I ran into a lot of difficulties and spent a great amount of time to learn the concepts while I was training the models. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my understand of the topic.**
 
 ## Outcome
 
