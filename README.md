@@ -1,5 +1,5 @@
 # Quora Insincere Questions Classification Kaggle Challenge
-![wordcloud](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/quora_wordcloud.png)
+![wordcloud](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/quora_wordcloud.png =350x250)
 ## Contents
 - [Introduction](#Introduction)
 - [EDA and text cleaning](#EDA)
@@ -37,12 +37,12 @@ The dataset is an imbalanced class with 94% sincere questions and only 6% insinc
 
 
 ## Text cleaning
-After getting a better sense of the data, we want to take create an embedding matrix can be used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb) along with additional functions in [here](xxx).
+After getting a better sense of the data, we want to take create an embedding matrix can be used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb) along with additional functions [here](xxx).
 
 
 
 ## Model
-To begin, I started with a basic naive bayes model with logistic regression to predict the binary labels. Later, I learned about the LSTM model and tried to add in new layers to boost up the result.
+To begin, I started with a basic naive bayes model with logistic regression to predict the binary labels. I later learned about the LSTM and GRU models and tried to use them to boost up the my result.
 
   0. **Naive Bayes with Logistic Regression** Model baseline [link to model_0](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_0.ipynb)
   1. **LSTM** Neural Network with basic text cleanings and **no embeddings weights** [link to model_1](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_1.ipynb)
@@ -65,7 +65,7 @@ To begin, I started with a basic naive bayes model with logistic regression to p
 
 ## What are RNN and LSTM?
 
-Since it's my first Kaggle challenge and also the first time to implement neural network models, I ran into a lot of difficulties and spent a great amount of time to learn the concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of the topic.**
+Since it's my first Kaggle challenge and also my first time implementing neural network models, I ran into a lot of difficulties and spent a great amount of time learning the concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of the topic.**
 
 ## Outcome
 
@@ -79,11 +79,11 @@ Since it's my first Kaggle challenge and also the first time to implement neural
 
 **Note: These are all late submissions, hence they are not shown on the public leaderboard**
 
-Though my scores are as not astonishing as most Kagglers', I had gained so, so much more knowledge of Word Embeddings and Neutral Network from where I was months ago. The entire process took around three weeks on learning about the new concepts, working on Kaggle, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey. There are still a lot of skills and concepts that I need to learn and improve. Yet, I'm excited for the challenges ahead and would love to share and discuss with other colleagues who also share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comments or feedback!
+Though my scores are not as astonishing compared to other Kagglers', I've had gained so, so much knowledge of Word Embeddings and Neutral Network over the last few months. The entire process took around three weeks on learning about the new concepts, working on Kaggle, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey. Though there are many topics that I still need to learn and improve, I'm very excited for the challenges ahead and would love to share and discuss with other colleagues who share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comment or feedback!
 
 ## Reference
 
-This project would not made possible without the help from the supportive Kaggle community. Below are the Kagglers that have provided great insights and codes for the challenge.
+This project would not made possible without the help from the very supportive Kaggle community. Below are some of the Kagglers who provided great insights and codes for the challenge.
 
 - https://www.kaggle.com/ashishpatel26/nlp-text-analytics-solution-quora
 - https://www.kaggle.com/christofhenkel/how-to-preprocessing-when-using-embeddings
