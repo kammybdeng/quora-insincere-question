@@ -4,9 +4,13 @@
 
 # Contents
 [Introduction](#Introduction)
+
 [EDA and text cleaning](#EDA)
+
 [Model](#Model)
+
 [Outcome](#Outcome)
+
 [Reference](#Reference)
 
 
@@ -45,7 +49,7 @@ Imbalanced class
 
 
 ## Text cleaning
-The biggest challenge. Tried multiple ways to clean the data.
+After getting a better sense of the data, we want to take create an embedding matrix can be be later used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb).
 
 
 
