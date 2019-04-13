@@ -21,7 +21,7 @@
 
 5. **Activation** 	           	|	→  transform outputs to non-linear relationship, e.g. sigmoid can restrain results to [0,1] and ReLU can restrain results to [0, +]
 
-## Recurrent Neural Network
+## Recurrent Neural Network 
 ![rnn_vs_rrnn](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/rnn_vs_rrnn.png)
 
 ### How is RNN different from CNN?
@@ -50,10 +50,10 @@ RNN learns from previous events, where CNN does not. Quoted from one of the reso
 
 However, sometimes the previous events are not very helpful for us or the machine to understand the big picture. Therefore, another branch of RNN is created and it’s called **LSTM (Long Short Term Memory)**
 
-## LTSM
+## LSTM
 ![lstm](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/lstm_model.png)
 
-LTSMs, Long Short Term Memory networks, are a special kind of RNN that are capable of learning long-term dependencies. They can remember information for long periods of time., where as standard RNNs struggles to learn. The sophisticated design of the LSTMs allows them to forget and keep previous information in a more precise way.
+LSTMs, Long Short Term Memory networks, are a special kind of RNN that are capable of learning long-term dependencies. They can remember information for long periods of time., where as standard RNNs struggles to learn. The sophisticated design of the LSTMs allows them to forget and keep previous information in a more precise way.
 
 ## GRU
 To determine how much of the past information needs to be passed to the output or to forget, GRUs, Gated Recurrent Unit, are models that update and reset the gates.
