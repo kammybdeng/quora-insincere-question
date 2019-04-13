@@ -12,13 +12,13 @@
 
 ## Introduction
 
-This challenge is hosted by Kaggle. The objective is to **predict whether a question asked on Quora is sincere or not.**
+Welcome to my first Kaggle challenge! This challenge was hosted by Kaggle from Nov 6th, 2018 to Jan 29th, 2019. The objective is to **predict whether a question asked on Quora is sincere or not.**
 https://www.kaggle.com/c/quora-insincere-questions-classification/overview
 
-### What's Quora?
+### What is Quora?
 Quora is a platform that empowers people to learn from each other. On Quora, people can ask questions and connect with others who contribute unique insights and quality answers.
 
-### What's an insincere question?
+### What is an insincere question?
 As defined in the [challenge description](https://www.kaggle.com/c/quora-insincere-questions-classification/data), an insincere question is a question intended to make a statement rather than look for helpful answers. Some characteristics are:
 
 - Has a non-neutral tone
@@ -39,7 +39,7 @@ The dataset is an imbalanced class with 94% sincere questions and only 6% insinc
 
 
 ## Text cleaning
-After getting a better sense of the data, we want to take create an embedding matrix can be used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb) along with additional functions [here](xxx).
+After getting a better sense of the data, we want to create an embedding matrix can be used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb) along with additional functions [here](https://github.com/kammybdeng/quora-insincere-question/tree/master/src).
 
 
 
@@ -49,21 +49,21 @@ To begin, I started with a basic naive bayes model with logistic regression to p
   0. **Naive Bayes with Logistic Regression** Model baseline [link to model_0](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_0.ipynb)
   1. **LSTM** Neural Network with basic text cleanings and **no embeddings weights** [link to model_1](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_1.ipynb)
   2. **LSTM and GRU** Neural Network with **embeddings weights** (GloVe) [link to model_2](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_2.ipynb)
-  - 1st layer: embedding layer as pretrained weights
-  - 2nd layer: spatial dropout
-  - 3rd layer: bidirectional with LSTM
-  - 4th layer: bidirectional with GRU
-  - 5th layer: global max pooling 1D
-  - 6th layer: 2 dense layers (size 16 and 32)
-  - 7th layer: output dense layers
+    - 1st layer: embedding layer as pretrained weights
+    - 2nd layer: spatial dropout
+    - 3rd layer: bidirectional with LSTM
+    - 4th layer: bidirectional with GRU
+    - 5th layer: global max pooling 1D
+    - 6th layer: 2 dense layers (size 16 and 32)
+    - 7th layer: output dense layers
   3. Trained with **KFold** [link to model_3](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_3.ipynb)
-  4. **LSTM and GRU** Neural Network with **embeddings weights** and **adjusted parameters**(GloVe)[link to model_4](xxhttps://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_4.ipynbx)
-  - 1st layer: embedding layer as pretrained weights
-  - 2nd layer: spatial dropout
-  - 3rd layer: bidirectional with LSTM
-  - 4th layer: bidirectional with GRU
-  - 5th layer: 2 global max pooling 1D
-  - 6th layer: output dense layer
+  4. **LSTM and GRU** Neural Network with **embeddings weights** and **adjusted parameters** from **KFold** (GloVe and Paragram)[link to model_4](xxhttps://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_4_2.ipynbx)
+    - 1st layer: embedding layer as pretrained weights
+    - 2nd layer: spatial dropout
+    - 3rd layer: bidirectional with LSTM
+    - 4th layer: bidirectional with GRU
+    - 5th layer: 2 global max pooling 1D
+    - 6th layer: output dense layer
 
 ## What are RNN and LSTM?
 
@@ -77,11 +77,11 @@ Since it's my first Kaggle challenge and also my first time implementing neural 
 | model 1       | 0.65081       | 1252/4037 (top 31%)  |
 | model 2       | 0.67055       | 1205/4037 (top 30%)  |
 | model 3       | 0.68037       | 1149/4037 (top 29%)  |
-| model 4       | 0.6xxxx       | xxxx  |
+| model 4       | 0.68397       | 1125/4037 (top 28%)  |
 
 **Note: These are all late submissions, hence they are not shown on the public leaderboard**
 
-Though my scores are not as astonishing compared to other Kagglers', I've had gained so, so much knowledge of Word Embeddings and Neutral Network over the last few months. The entire process took around three weeks on learning about the new concepts, working on Kaggle, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey. Though there are many topics that I still need to learn and improve, I'm very excited for the challenges ahead and would love to share and discuss with other colleagues who share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comment or feedback!
+Though my final score falls in the **top 28%**, I'm pretty happy to obtain this result in my first Kaggle challenge and have gained so, so much knowledge of Word Embeddings and Neutral Network over the last few months. The entire process took around three weeks on learning the new concepts, training the models, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey. Though there are many topics that I still need to learn and improve, I'm very excited for the challenges ahead and would love to share and discuss with other colleagues who share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comment or feedback!
 
 ## Reference
 
