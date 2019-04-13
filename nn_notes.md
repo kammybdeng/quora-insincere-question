@@ -3,6 +3,7 @@
 - [Conventional Neural Network](#Conventional-Neural-Network)
 - [Recurrent Neural Network](#Recurrent-Neural-Network)
 - [LSTM](#LSTM)
+- [GRU](#GRU)
 - [Bidirectional](#Bidirectional)
 - [Reference](#Reference)
 
@@ -21,7 +22,7 @@
 
 5. **Activation** 	           	|	→  transform outputs to non-linear relationship, e.g. sigmoid can restrain results to [0,1] and ReLU can restrain results to [0, +]
 
-## Recurrent Neural Network 
+## Recurrent Neural Network
 ![rnn_vs_rrnn](https://github.com/kammybdeng/quora-insincere-question/blob/master/img/rnn_vs_rrnn.png)
 
 ### How is RNN different from CNN?
