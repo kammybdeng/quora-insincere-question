@@ -44,7 +44,7 @@ After getting a better sense of the data, we want to create an embedding matrix 
 
 ## Challenges
 
-Since it was my first Kaggle challenge and also my first time implementing neural network models and word embeddings, I ran into a lot of difficulties and needed to spend a great amount of time learning these concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of the topic like CNN, RNN, LSTM and GRU.**
+Since it was my first Kaggle challenge and also my first time implementing neural network models and word embeddings, I ran into a lot of difficulties and needed to spend a great amount of time learning these concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of CNN, RNN, LSTM and GRU.**
 
 ## Model
 To begin, I started with a basic naive bayes model with logistic regression to predict the binary labels. I later learned about the LSTM and GRU models and tried to use them to boost up the my result.
@@ -52,21 +52,21 @@ To begin, I started with a basic naive bayes model with logistic regression to p
   0. **Naive Bayes with Logistic Regression** Model baseline [link to model_0](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_0.ipynb)
   1. **LSTM** Neural Network with basic text cleanings and **no embeddings weights** [link to model_1](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_1.ipynb)
   2. **LSTM and GRU** Neural Network with **embeddings weights** (GloVe) [link to model_2](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_2.ipynb)
-    - 1st layer: embedding layer as pretrained weights
-    - 2nd layer: spatial dropout
-    - 3rd layer: bidirectional with LSTM
-    - 4th layer: bidirectional with GRU
-    - 5th layer: global max pooling 1D
-    - 6th layer: 2 dense layers (size 16 and 32)
-    - 7th layer: output dense layers
+      - 1st layer: embedding layer as pretrained weights
+      - 2nd layer: spatial dropout
+      - 3rd layer: bidirectional with LSTM
+      - 4th layer: bidirectional with GRU
+      - 5th layer: global max pooling 1D
+      - 6th layer: 2 dense layers (size 16 and 32)
+      - 7th layer: output dense layers
   3. Trained with **KFold** [link to model_3](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_3.ipynb)
-  4. **LSTM and GRU** Neural Network with **embeddings weights** and **adjusted parameters** from **KFold** (GloVe and Paragram)[link to model_4](xxhttps://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_4_2.ipynbx)
-    - 1st layer: embedding layer as pretrained weights
-    - 2nd layer: spatial dropout
-    - 3rd layer: bidirectional with LSTM
-    - 4th layer: bidirectional with GRU
-    - 5th layer: 2 global max pooling 1D
-    - 6th layer: output dense layer
+  4. **LSTM and GRU** Neural Network with **embeddings weights** and **adjusted parameters** from **KFold** (GloVe and Paragram)[link to model_4](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/model_4_2.ipynb)
+      - 1st layer: embedding layer as pretrained weights
+      - 2nd layer: spatial dropout
+      - 3rd layer: bidirectional with LSTM
+      - 4th layer: bidirectional with GRU
+      - 5th layer: 2 global max pooling 1D
+      - 6th layer: output dense layer
 
 | Model         | Public Score  | Rank  |
 | ------------- |:-------------:| -----:|
