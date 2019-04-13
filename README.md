@@ -4,9 +4,10 @@
 
 ## Contents
 - [Introduction](#Introduction)
-- [EDA and text cleaning](#EDA)
+- [Exploring Data Analysis and text cleaning](#EDA)
+- [Challenges](#Challenges)
 - [Model](#Model)
-- [Outcome](#Outcome)
+- [Score](#Score)
 - [Reference](#Reference)
 
 
@@ -41,7 +42,9 @@ The dataset is an imbalanced class with 94% sincere questions and only 6% insinc
 ## Text cleaning
 After getting a better sense of the data, we want to create an embedding matrix can be used in our models. The challenge is to match words in the training set with the words in the embedding documents. In order to do this, we first need to clean up the text in the training data. The process can be found in my [eda kernel](https://github.com/kammybdeng/quora-insincere-question/blob/master/model/quora-insincere-eda-preprocessing.ipynb) along with additional functions [here](https://github.com/kammybdeng/quora-insincere-question/tree/master/src).
 
+## Challenges
 
+Since it was my first Kaggle challenge and also my first time implementing neural network models and word embeddings, I ran into a lot of difficulties and needed to spend a great amount of time learning these concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of the topic like CNN, RNN, LSTM and GRU.**
 
 ## Model
 To begin, I started with a basic naive bayes model with logistic regression to predict the binary labels. I later learned about the LSTM and GRU models and tried to use them to boost up the my result.
@@ -65,12 +68,6 @@ To begin, I started with a basic naive bayes model with logistic regression to p
     - 5th layer: 2 global max pooling 1D
     - 6th layer: output dense layer
 
-## What are RNN and LSTM?
-
-Since it's my first Kaggle challenge and also my first time implementing neural network models, I ran into a lot of difficulties and spent a great amount of time learning the concepts while I was doing the challenge. **I have compiled a [notebook](https://github.com/kammybdeng/quora-insincere-question/blob/master/nn_notes.md) to record my notes and understanding of the topic.**
-
-## Outcome
-
 | Model         | Public Score  | Rank  |
 | ------------- |:-------------:| -----:|
 | model 0       | 0.64283       | 1271/4037 (top 32%)  |
@@ -81,7 +78,9 @@ Since it's my first Kaggle challenge and also my first time implementing neural 
 
 **Note: These are all late submissions, hence they are not shown on the public leaderboard**
 
-Though my final score falls in the **top 28%**, I'm pretty happy to obtain this result in my first Kaggle challenge and have gained so, so much knowledge of Word Embeddings and Neutral Network over the last few months. The entire process took around three weeks on learning the new concepts, training the models, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey. Though there are many topics that I still need to learn and improve, I'm very excited for the challenges ahead and would love to share and discuss with other colleagues who share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comment or feedback!
+## Score
+
+Being the first time competing on Kaggle and with not much background in Word Embeddings and Neural Network, I'm pretty happy that my final score made it to the **top 28%** of all the competitors! I gained so, so much knowledge of these two dense topics in the last few months. The entire process took around three weeks on learning the new concepts, training the models, and writing up this repository. I'm proud to say that this is a milestone in my Data Science journey, and very excited for the challenges ahead. I would love to share and discuss with other colleagues who share the same passion in Data Science or Machine Learning. You are very welcome to contact me if you have any comment or feedback!
 
 ## Reference
 
